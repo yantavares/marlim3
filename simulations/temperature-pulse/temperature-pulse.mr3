@@ -1,0 +1,290 @@
+{
+  "language": "en",
+  "system": "PROD",
+  "initialConfig": {
+    "gasLine": false,
+    "transient": true,
+    "initialCondition": 1,
+    "xyMode": false,
+    "pressureTable": true
+  },
+  "compTable": {
+    "numPoints": 50,
+    "minPressure": 1.0,
+    "maxPressure": 60.0,
+    "minTemperature": 15.0,
+    "maxTemperature": 90.0
+  },
+  "time": {
+    "finalTime": 3000,
+    "times": [
+      0,
+      990,
+      1000,
+      1499,
+      1500,
+      1510,
+      3000
+    ],
+    "maxDT": [
+      5.0,
+      0.5,
+      0.2,
+      0.2,
+      0.2,
+      0.5,
+      5.0
+    ],
+    "saveSnapshot": [
+      1000,
+      1500,
+      3000
+    ]
+  },
+  "productionFluid": [
+    {
+      "id": 0,
+      "api": 35.95,
+      "gor": 0.0,
+      "gasDensity": 0.845,
+      "bsw": 0.0
+    }
+  ],
+  "material": [
+    {
+      "id": 0,
+      "label": "carbon-steel",
+      "type": 0,
+      "conductivity": 50,
+      "specificHeat": 500,
+      "rho": 7800
+    }
+  ],
+  "crossSection": [
+    {
+      "id": 0,
+      "label": "cs-6in",
+      "innerDiameter": 0.1524,
+      "roughness": 0.000183,
+      "layers": [
+        {
+          "label": "steel-wall",
+          "materialId": 0,
+          "layerMeasurementType": "THICKNESS",
+          "thickness": 0.00711,
+          "discretization": 2
+        }
+      ]
+    }
+  ],
+  "productionPipe": [
+    {
+      "id": 0,
+      "label": "flowline",
+      "crossSectionId": 0,
+      "environment": 1,
+      "angle": 0.0,
+      "discretization": [
+        {
+          "numCells": 20,
+          "length": 50.0
+        }
+      ],
+      "initialConditions": {
+        "measuredPosition": [
+          0,
+          1
+        ],
+        "ambientTemp": [
+          20.0,
+          20.0
+        ],
+        "ambientVel": [
+          0.3,
+          0.3
+        ]
+      }
+    }
+  ],
+  "separator": {
+    "active": true,
+    "time": [
+      0
+    ],
+    "pressure": [
+      15.0
+    ]
+  },
+  "liquidSource": [
+    {
+      "id": 0,
+      "prodFluidId": 0,
+      "measuredLength": 0.1,
+      "time": [
+        0,
+        1000,
+        1001,
+        1500,
+        1501,
+        3000
+      ],
+      "temperature": [
+        20,
+        20,
+        80,
+        80,
+        20,
+        20
+      ],
+      "liquidFlowRate": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ]
+    }
+  ],
+  "productionProfile": {
+    "active": true,
+    "time": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1100,
+      1200,
+      1300,
+      1400,
+      1500,
+      1600,
+      1700,
+      1800,
+      1900,
+      2000,
+      2100,
+      2200,
+      2300,
+      2400,
+      2500,
+      2600,
+      2700,
+      2800,
+      2900,
+      3000
+    ],
+    "temperature": true,
+    "pressure": true,
+    "holdup": true,
+    "usl": true
+  },
+  "productionTrend": [
+    {
+      "active": true,
+      "measuredLength": 0,
+      "dt": 1.0,
+      "label": "x=0m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 100,
+      "dt": 1.0,
+      "label": "x=100m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 200,
+      "dt": 1.0,
+      "label": "x=200m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 300,
+      "dt": 1.0,
+      "label": "x=300m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 400,
+      "dt": 1.0,
+      "label": "x=400m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 500,
+      "dt": 1.0,
+      "label": "x=500m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 600,
+      "dt": 1.0,
+      "label": "x=600m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 700,
+      "dt": 1.0,
+      "label": "x=700m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 800,
+      "dt": 1.0,
+      "label": "x=800m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 900,
+      "dt": 1.0,
+      "label": "x=900m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    },
+    {
+      "active": true,
+      "measuredLength": 1000,
+      "dt": 1.0,
+      "label": "x=1000m",
+      "temperature": true,
+      "pressure": true,
+      "holdup": true
+    }
+  ]
+}
